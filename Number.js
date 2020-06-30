@@ -10,7 +10,7 @@ function deconstruct(number) {
   // number = sign * coefficient * (2 ** exponent)
 
   let sign = 1; // 부호
-  let coefficient = number; // 유효숫자 => 계수
+  let coefficient = number; // 유효숫자 => 정수 계수
   let exponent = 0; // 지수
 
   // 계수 부호 제거
@@ -49,6 +49,7 @@ function deconstruct(number) {
   };
 }
 console.log(Number.MAX_SAFE_INTEGER);
+// Number.MAX_SAFE_INTEGER => 부호가 잇는 54비트 정수
 console.log(deconstruct(Number.MAX_SAFE_INTEGER));
 console.log(deconstruct(1));
 console.log(deconstruct(1 / 10));
